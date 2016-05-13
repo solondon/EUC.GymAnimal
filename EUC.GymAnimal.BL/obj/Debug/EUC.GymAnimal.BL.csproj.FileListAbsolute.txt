@@ -1,0 +1,5 @@
+F:\DEV\VS\EUC.GymAnimal\EUC.GymAnimal.BL\bin\Debug\EUC.GymAnimal.BL.dll
+F:\DEV\VS\EUC.GymAnimal\EUC.GymAnimal.BL\bin\Debug\EUC.GymAnimal.BL.pdb
+F:\DEV\VS\EUC.GymAnimal\EUC.GymAnimal.BL\obj\Debug\EUC.GymAnimal.BL.csprojResolveAssemblyReference.cache
+F:\DEV\VS\EUC.GymAnimal\EUC.GymAnimal.BL\obj\Debug\EUC.GymAnimal.BL.dll
+F:\DEV\VS\EUC.GymAnimal\EUC.GymAnimal.BL\obj\Debug\EUC.GymAnimal.BL.pdb
