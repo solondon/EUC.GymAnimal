@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EUC.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,15 +21,15 @@ namespace EUC.GymAnimal.BL
         Female
     }
 
-    public class Profile
+    public class Profile : BaseEntity, ILoggable
     {
         public Profile()
         {
         }
 
-        public Profile(int personMonitorId)
+        public Profile(int profileId)
         {
-            this.PersonMonitorId = personMonitorId;
+            this.ProfileId = profileId;
         }
 
         public double BMI
@@ -37,26 +38,16 @@ namespace EUC.GymAnimal.BL
             set { _bmi = value; }
         }
 
-        public Profile Retrive()
-        {
-            return new Profile();
-        }
-
-        public List<Profile> Retrieve()
-        {
-            return new List<Profile>();
-        }
-
         public double CalculateBMI()
         {
             double bmi = 0;
 
             //error checking
-            if (Weight == 0) throw new Exception("Weight not specified cant calculate BMI");
-            if (Height == 0) throw new Exception("Height not specified cant calculate BMI");
+            if (WeightKg == 0) throw new Exception("WeightKg not specified cant calculate BMI");
+            if (HeightCm == 0) throw new Exception("HeightCm not specified cant calculate BMI");
 
             //double BMI = kg / Math.Pow(heightInCm / 100.0, 2);
-            bmi = Weight / Math.Pow(Height / 100.0, 2);
+            bmi = WeightKg / Math.Pow(HeightCm / 100.0, 2);
             bmi = Math.Round(bmi, 1);
 
             return bmi;
@@ -84,34 +75,32 @@ namespace EUC.GymAnimal.BL
             return status;
         }
 
-        public bool Save()
-        {
-            return true;
-        }
-
-        public bool Validate()
+        public override bool Validate()
         {
             bool isValid = true;
             if (MeasurementDate==null) isValid = false;
-
+            if (WeightKg == 0) isValid = false;
+            if (HeightCm == 0) isValid = false;
             return isValid;
         }
 
-        public int PersonMonitorId { get; set; }
+        public string Log()
+        {
+            var logstring= this.ProfileId + ": Heightcm: " + this.HeightCm
+                + " WeightKg: " + this.WeightKg + " " + this.EntityState.ToString();
+
+            return logstring;
+        }
+
+        public int ProfileId { get; set; }
         public DateTime? MeasurementDate { get; set; }
-        public double Weight { get; set; }
-        public double Height { get; set; }
+        public double WeightKg { get; set; }
+        public double HeightCm { get; set; }
         public double BodyFatPercentage { get; set; }
         public double BodyFatMass { get; set; }
         public static int InstanceCount { get; set; }
 
         private double _bmi;
-
-        //calculated
-        public double IdealWeight { get; set; }
-        public double IdealBMI { get; private set; }
-        public double IdealBodyFatPercentage { get; private set; }
-        public double IdealBodyFatMass { get; private set; }
         
     }
 }

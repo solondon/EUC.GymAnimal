@@ -6,52 +6,30 @@ using System.Threading.Tasks;
 
 namespace EUC.GymAnimal.BL
 {
-    public enum SetType
-    {
-        SingleSet = 1,
-        SuperSet = 2,
-        GiantSet = 3,
-        ProgressiveSet,
-        ForceSet
-    }
-
-    class SetItem
+    public class SetItem : BaseEntity
     {
         public SetItem()
         {
         }
 
-        public SetItem(int setId)
+        public SetItem(int setItemId)
         {
-            this.SetId = setId;
+            this.SetItemId = setItemId;
         }
 
-        public SetItem Retrive()
-        {
-            return new SetItem();
-        }
-
-        public List<SetItem> Retrieve()
-        {
-            return new List<SetItem>();
-        }
-        public bool Save()
-        {
-            return true;
-        }
-
-        public bool Validate()
+        public override bool Validate()
         {
             bool isValid = true;
-            //if (MeasurementDate == null) isValid = false;
+            if (NumberOfReps == 0) isValid = false;
 
             return isValid;
         }
 
-        public int SetId { get; private set; }
-        public SetType SetType { get; set; }
-        public string Exercise { get; set; }
-        public string Notes { get; set; }
+        public int SetItemId { get; set; }
+        public int NumberOfReps { get; set; }
+        public double Weight { get; set; }
+        public double WeightRight { get; set; }
+        public double WeightLeft { get; set; }
 
     }
 }

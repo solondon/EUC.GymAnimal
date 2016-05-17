@@ -12,7 +12,10 @@ namespace EUC.GymAnimal.BL
         {
             Person person = new Person(personId);
 
-            //temporary hard coded data for testing
+            //code to retrieve instance of the Person class
+
+            // Temporary hard coded values to return 
+            // a populated Person
             if (personId==1)
             {
                 person.Age = 48;
@@ -22,19 +25,26 @@ namespace EUC.GymAnimal.BL
                 person.Sex = Sex.Male;
             }
 
-            //retrieve the requested person by Id
-
             return person;
         }
 
-        public List<Person> Retrieve()
+        public bool Save(Person person)
         {
-            return new List<Person>();
-        }
+            var success = true;
 
-        public bool Save()
-        {
-            return true;
+            if (person.HasChanges && person.IsValid)
+            {
+                if (person.IsNew)
+                {
+                    // Call an Insert Stored Procedure
+
+                }
+                else
+                {
+                    // Call an Update Stored Procedure
+                }
+            }
+            return success;
         }
     }
 }

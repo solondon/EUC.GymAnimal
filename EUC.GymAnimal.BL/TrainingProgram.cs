@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EUC.GymAnimal.BL
 {
-    class TrainingProgram
+    public class TrainingProgram : BaseEntity
     {
         public TrainingProgram()
         {
@@ -17,21 +17,7 @@ namespace EUC.GymAnimal.BL
             this.TrainingProgramId = trainingProgramId;
         }
 
-        public Profile Retrive()
-        {
-            return new Profile();
-        }
-
-        public List<TrainingProgram> Retrieve()
-        {
-            return new List<TrainingProgram>();
-        }
-        public bool Save()
-        {
-            return true;
-        }
-
-        public bool Validate()
+        public override bool Validate()
         {
             bool isValid = true;
             //if (MeasurementDate == null) isValid = false;

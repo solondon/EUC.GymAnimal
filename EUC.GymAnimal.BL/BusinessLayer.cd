@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EUC.GymAnimal.BL.BaseEntity" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAEAAAAgAAAAAEAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>BaseEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EUC.GymAnimal.BL.Day">
+    <Position X="11.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABCAAACAAAAAAAAAAAAACAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Day.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EUC.GymAnimal.BL.DayRepository">
+    <Position X="11.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DayRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EUC.GymAnimal.BL.Person">
+    <Position X="7.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAACABIFEAEAAAAAAAAgAAAgAAAAAAgAAAAg=</HashCode>
+      <FileName>Person.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EUC.GymAnimal.BL.PersonRepository">
+    <Position X="7.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PersonRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EUC.GymAnimal.BL.Profile">
+    <Position X="6" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAQAAACAAABAAIIAAAAABAgAAgAAAABAAAECgAA=</HashCode>
+      <FileName>Profile.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EUC.GymAnimal.BL.ProfileIdeal">
+    <Position X="4.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAACAADAgAAAIAAAAAgAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>ProfileIdeal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EUC.GymAnimal.BL.ProfileRepository">
+    <Position X="6" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProfileRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EUC.GymAnimal.BL.SetItem">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAEAAAAACAAAAABAEAAAAAAACA=</HashCode>
+      <FileName>SetItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EUC.GymAnimal.BL.SetItemRepository">
+    <Position X="9.5" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SetItemRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EUC.GymAnimal.BL.SetMaster">
+    <Position X="13.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAACAAAAAAAEABAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>SetMaster.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EUC.GymAnimal.BL.TrainingProgram">
+    <Position X="2.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAYAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>TrainingProgram.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EUC.GymAnimal.BL.TrainingProgramRepository">
+    <Position X="2.5" Y="5.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AIAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TrainingProgramRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EUC.GymAnimal.BL.Week">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACEAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Week.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EUC.GymAnimal.BL.WeekRepository">
+    <Position X="0.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WeekRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EUC.GymAnimal.BL.SetMasterRepository">
+    <Position X="13.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAIAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SetMasterRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="EUC.GymAnimal.BL.EntityStateOption">
+    <Position X="16.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>BaseEntity.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EUC.GymAnimal.BL.Phase">
+    <Position X="16.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAQAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Day.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EUC.GymAnimal.BL.WeightStatus">
+    <Position X="16.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAQAAAAAAAIAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Profile.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EUC.GymAnimal.BL.Sex">
+    <Position X="16.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Profile.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EUC.GymAnimal.BL.TypeOfSet">
+    <Position X="16.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAIAAAAAAAAAAQEAAAAAAgAAAAAAAAAAAAABA=</HashCode>
+      <FileName>SetMaster.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

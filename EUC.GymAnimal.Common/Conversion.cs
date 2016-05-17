@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EUC.GymAnimal.Common
+namespace EUC.Common
 {
     public enum WeightType
     {
@@ -31,5 +31,7 @@ namespace EUC.GymAnimal.Common
                     throw new Exception("Weight type not supported");
             }
         }
+
+
     }
 }

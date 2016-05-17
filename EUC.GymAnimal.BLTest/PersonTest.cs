@@ -8,7 +8,7 @@ namespace EUC.GymAnimal.BLTest
     public class PersonTest
     {
         [TestMethod]
-        public void FullNameTestValid()
+        public void PersonFullNameTestValid()
         {
             //Arrange
             Person person = new Person();
@@ -25,7 +25,7 @@ namespace EUC.GymAnimal.BLTest
         }
 
         [TestMethod]
-        public void FullNameFirstNameEmpty()
+        public void PersonFullNameFirstNameEmpty()
         {
             //Arrange
             Person person = new Person();
@@ -41,7 +41,7 @@ namespace EUC.GymAnimal.BLTest
         }
 
         [TestMethod]
-        public void FullNameLastNameEmpty()
+        public void PersonFullNameLastNameEmpty()
         {
             //Arrange
             Person person = new Person();
@@ -57,7 +57,7 @@ namespace EUC.GymAnimal.BLTest
         }
 
         [TestMethod]
-        public void ValidateValid()
+        public void PersonValidateValid()
         {
             //Arrange
             Person person = new Person();
@@ -75,7 +75,7 @@ namespace EUC.GymAnimal.BLTest
         }
 
         [TestMethod]
-        public void ValidateInvalidOnlyEmailAddress()
+        public void PersonValidateInvalidOnlyEmailAddress()
         {
             //Arrange
             Person person = new Person();
@@ -91,7 +91,7 @@ namespace EUC.GymAnimal.BLTest
         }
 
         [TestMethod]
-        public void ValidateInvalidNoEmailAddress()
+        public void PersonValidateInvalidNoEmailAddress()
         {
             //Arrange
             Person person = new Person();

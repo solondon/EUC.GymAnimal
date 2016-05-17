@@ -1,0 +1,10 @@
+F:\DEV\VS\EUC.GymAnimal\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+F:\DEV\VS\EUC.GymAnimal\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+F:\DEV\VS\EUC.GymAnimal\UnitTestProject1\bin\Debug\EUC.GymAnimal.BL.dll
+F:\DEV\VS\EUC.GymAnimal\UnitTestProject1\bin\Debug\EUC.GymAnimal.Common.dll
+F:\DEV\VS\EUC.GymAnimal\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+F:\DEV\VS\EUC.GymAnimal\UnitTestProject1\bin\Debug\EUC.GymAnimal.BL.pdb
+F:\DEV\VS\EUC.GymAnimal\UnitTestProject1\bin\Debug\EUC.GymAnimal.Common.pdb
+F:\DEV\VS\EUC.GymAnimal\UnitTestProject1\obj\Debug\EUC.CommonTest.csprojResolveAssemblyReference.cache
+F:\DEV\VS\EUC.GymAnimal\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+F:\DEV\VS\EUC.GymAnimal\UnitTestProject1\obj\Debug\UnitTestProject1.pdb

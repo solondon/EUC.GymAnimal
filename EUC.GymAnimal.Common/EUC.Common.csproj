@@ -7,7 +7,7 @@
     <ProjectGuid>{CE82BB53-8239-47D3-96EF-D612BF58A84C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EUC.GymAnimal.Common</RootNamespace>
+    <RootNamespace>EUC.Common</RootNamespace>
     <AssemblyName>EUC.GymAnimal.Common</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conversion.cs" />
+    <Compile Include="ILoggable.cs" />
+    <Compile Include="LoggingService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

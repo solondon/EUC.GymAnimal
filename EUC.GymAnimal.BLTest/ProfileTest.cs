@@ -14,23 +14,25 @@ namespace EUC.GymAnimal.BLTest
     {
 
         [TestMethod]
-        public void ValidateValid()
+        public void ProfileValidateValid()
         {
             //Assign
-            Profile personMonitor = new Profile();
-            personMonitor.MeasurementDate = DateTime.Now;
+            Profile profile = new Profile();
+            profile.MeasurementDate = DateTime.Now;
+            profile.HeightCm = 181;
+            profile.WeightKg = 94;
 
             bool expected = true;
 
             //Act
-            bool actual= personMonitor.Validate();
+            bool actual= profile.Validate();
 
             //Assert
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ValidateInValid()
+        public void ProfileValidateInValid()
         {
             //Assign
             Profile personMonitor = new Profile();
@@ -45,12 +47,12 @@ namespace EUC.GymAnimal.BLTest
         }
 
         [TestMethod]
-        public void CalculateWeightStatusValid()
+        public void ProfileCalculateWeightStatusValid()
         {
             //Assign
             Profile personMonitor = new Profile();
-            personMonitor.Height = 180;
-            personMonitor.Weight = 94.4;
+            personMonitor.HeightCm = 180;
+            personMonitor.WeightKg = 94.4;
 
             WeightStatus expected = WeightStatus.Overweight;
 
@@ -62,7 +64,7 @@ namespace EUC.GymAnimal.BLTest
         }
 
         [TestMethod]
-        public void CalculateWeightStatusInValid()
+        public void ProfileCalculateWeightStatusInValid()
         {
             //Assign
             Profile personMonitor = new Profile();
@@ -76,12 +78,12 @@ namespace EUC.GymAnimal.BLTest
         }
 
         [TestMethod]
-        public void CalculateBMIValid()
+        public void ProfileCalculateBMIValid()
         {
             //Assign
             Profile personMonitor = new Profile();
-            personMonitor.Height = 181;
-            personMonitor.Weight = 94.4;
+            personMonitor.HeightCm = 181;
+            personMonitor.WeightKg = 94.4;
 
             double expected = 28.8;
 
@@ -93,12 +95,12 @@ namespace EUC.GymAnimal.BLTest
         }
 
         [TestMethod]
-        public void CalculateBMIInValidNoHeight()
+        public void ProfileCalculateBMIInValidNoHeight()
         {
             //Assign
             Profile personMonitor = new Profile();
-            //personMonitor.Height = 181;
-            personMonitor.Weight = 94.4;
+            //personMonitor.HeightCm = 181;
+            personMonitor.WeightKg = 94.4;
 
             double expected = 28.8;
 

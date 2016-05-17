@@ -9,7 +9,7 @@ namespace EUC.GymAnimal.BLTest
     public class PersonRepositoryTest
     {
         [TestMethod]
-        public void RetrieveExisting()
+        public void PersonRepoRetrieveExisting()
         {
             //Arrange
             PersonRepository personRepository = new PersonRepository();

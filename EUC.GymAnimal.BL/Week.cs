@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EUC.GymAnimal.BL
 {
-    class Week
+    class Week : BaseEntity
     {
         public Week()
         {
@@ -17,21 +17,7 @@ namespace EUC.GymAnimal.BL
             this.WeekId = WeekId;
         }
 
-        public Week Retrive()
-        {
-            return new Week();
-        }
-
-        public List<Week> Retrieve()
-        {
-            return new List<Week>();
-        }
-        public bool Save()
-        {
-            return true;
-        }
-
-        public bool Validate()
+        public override bool Validate()
         {
             bool isValid = true;
             //if (MeasurementDate == null) isValid = false;

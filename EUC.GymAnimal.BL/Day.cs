@@ -13,32 +13,18 @@ namespace EUC.GymAnimal.BL
         Beast
     }
 
-    public class Day
+    public class Day : BaseEntity
     {
         public Day()
         {
         }
 
-        public Day(int dayRoutineId)
+        public Day(int dayId)
         {
-            this.DayRoutineId = dayRoutineId;
+            this.DayId = dayId;
         }
 
-        public Day Retrive()
-        {
-            return new Day();
-        }
-
-        public List<Day> Retrieve()
-        {
-            return new List<Day>();
-        }
-        public bool Save()
-        {
-            return true;
-        }
-
-        public bool Validate()
+        public override bool Validate()
         {
             bool isValid = true;
             //if (MeasurementDate == null) isValid = false;
@@ -46,7 +32,7 @@ namespace EUC.GymAnimal.BL
             return isValid;
         }
 
-        public int DayRoutineId { get; private set; }
+        public int DayId { get; private set; }
         public DateTime? WorkoutDate { get; set; }
         public int DayNumber { get; set; }
         public Phase ProgramPhase { get; set; }

@@ -9,7 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6571E3BC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUC.GymAnimal.BLTest", "EUC.GymAnimal.BLTest\EUC.GymAnimal.BLTest.csproj", "{B74F7D5E-EAF2-4814-9BF5-FE22F28C5C4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUC.GymAnimal.Common", "EUC.GymAnimal.Common\EUC.GymAnimal.Common.csproj", "{CE82BB53-8239-47D3-96EF-D612BF58A84C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUC.Common", "EUC.GymAnimal.Common\EUC.Common.csproj", "{CE82BB53-8239-47D3-96EF-D612BF58A84C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUC.CommonTest", "UnitTestProject1\EUC.CommonTest.csproj", "{FDBDCF20-84F3-41FF-B0F4-8267CD0F80AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,11 +31,16 @@ Global
 		{CE82BB53-8239-47D3-96EF-D612BF58A84C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE82BB53-8239-47D3-96EF-D612BF58A84C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE82BB53-8239-47D3-96EF-D612BF58A84C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDBDCF20-84F3-41FF-B0F4-8267CD0F80AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDBDCF20-84F3-41FF-B0F4-8267CD0F80AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDBDCF20-84F3-41FF-B0F4-8267CD0F80AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDBDCF20-84F3-41FF-B0F4-8267CD0F80AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B74F7D5E-EAF2-4814-9BF5-FE22F28C5C4E} = {6571E3BC-C31E-4BF5-84D6-7BD0FE947C3B}
+		{FDBDCF20-84F3-41FF-B0F4-8267CD0F80AF} = {6571E3BC-C31E-4BF5-84D6-7BD0FE947C3B}
 	EndGlobalSection
 EndGlobal
