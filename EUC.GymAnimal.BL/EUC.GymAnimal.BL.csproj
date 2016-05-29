@@ -41,13 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseEntity.cs" />
-    <Compile Include="Day.cs" />
-    <Compile Include="DayRepository.cs" />
     <Compile Include="ProfileIdeal.cs" />
-    <Compile Include="PersonRepository.cs" />
+    <Compile Include="UserRepository.cs" />
     <Compile Include="ProfileRepository.cs" />
     <Compile Include="SetItem.cs" />
-    <Compile Include="Person.cs" />
+    <Compile Include="User.cs" />
     <Compile Include="Profile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SetItemRepository.cs" />
@@ -55,8 +53,8 @@
     <Compile Include="SetMasterRepository.cs" />
     <Compile Include="TrainingProgram.cs" />
     <Compile Include="TrainingProgramRepository.cs" />
-    <Compile Include="Week.cs" />
-    <Compile Include="WeekRepository.cs" />
+    <Compile Include="WeekSchedule.cs" />
+    <Compile Include="WeekScheduleRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BusinessLayer.cd" />

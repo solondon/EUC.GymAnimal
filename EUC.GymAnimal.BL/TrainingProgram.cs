@@ -19,14 +19,14 @@ namespace EUC.GymAnimal.BL
 
         public override bool Validate()
         {
-            bool isValid = true;
-            //if (MeasurementDate == null) isValid = false;
-
-            return isValid;
+            if (string.IsNullOrEmpty(ProgramName)) return false;
+            if (NumberOfWeeks == 0) return false;
+            return true;
         }
 
         public int TrainingProgramId { get; set; }
         public string ProgramName { get; set; }
         public int NumberOfWeeks { get; set; }
+        public string Description { get; set; }
     }
 }

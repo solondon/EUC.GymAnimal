@@ -14,9 +14,9 @@ namespace UnitTestProject1
         {
             //Arrange
             var logItems = new List<ILoggable>();
-            var person = new Person(1)
+            var person = new User(1)
             {
-                Age = 48,
+                //Age = 48,
                 FirstName = "Juan",
                 LastName="Lopez",
                 EmailAddress="jlopez@jlopez.co.uk"

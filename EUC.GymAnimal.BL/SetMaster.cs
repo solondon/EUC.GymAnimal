@@ -10,8 +10,8 @@ namespace EUC.GymAnimal.BL
     {
         UnKnown = 0,
         SingleSet = 1,
-        SuperSet = 2,
-        GiantSet = 3,
+        SuperSet,
+        GiantSet,
         ProgressiveSet,
         ForceSet
     }
@@ -29,17 +29,16 @@ namespace EUC.GymAnimal.BL
 
         public override bool Validate()
         {
-            bool isValid = true;
-            if (SetType == TypeOfSet.UnKnown) isValid = false;
-            if (string.IsNullOrWhiteSpace(Exercise)) isValid = false;
-
-            return isValid;
+            if (SetType == TypeOfSet.UnKnown) return false;
+            if (string.IsNullOrWhiteSpace(Exercise)) return false;
+            return true;
         }
 
         public int SetMasterId { get; private set; }
         public TypeOfSet SetType { get; set; }
         public string Exercise { get; set; }
         public string Notes { get; set; }
+        public List<SetItem> setItems { get; set; }
 
     }
 }

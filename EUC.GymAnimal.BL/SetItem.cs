@@ -19,10 +19,8 @@ namespace EUC.GymAnimal.BL
 
         public override bool Validate()
         {
-            bool isValid = true;
-            if (NumberOfReps == 0) isValid = false;
-
-            return isValid;
+            if (NumberOfReps == 0) return false;
+            return true;
         }
 
         public int SetItemId { get; set; }

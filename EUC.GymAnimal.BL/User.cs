@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace EUC.GymAnimal.BL
 {
-    public class Person : BaseEntity, ILoggable
+    public class User : BaseEntity, ILoggable
     {
-        public Person()
+        public User()
         {
         }
 
-        public Person(int personId)
+        public User(int userID)
         {
-            this.PersonId = personId;
+            this.UserID = userID;
         }
 
         public override string ToString()
@@ -40,10 +40,19 @@ namespace EUC.GymAnimal.BL
             }
         }
 
+        //Calculate age
         public int Age
         {
-            get { return _age; }
-            set { _age = value; }
+            get
+            {
+                if (BirthDate == DateTime.MinValue) throw new ArgumentException("BirthDate has not been set, required to calculate age.");
+
+                DateTime today = DateTime.Today;
+                int age = today.Year - BirthDate.Year;
+                if (BirthDate > today.AddYears(-age)) age--;
+
+                return age;
+            }
         }
 
         public Sex Sex
@@ -54,30 +63,27 @@ namespace EUC.GymAnimal.BL
 
         public override bool Validate()
         {
-            bool isValid = true;
-            if (string.IsNullOrWhiteSpace(FullName)) isValid = false;
-            if (string.IsNullOrWhiteSpace(EmailAddress)) isValid = false;
-
-            return isValid;
+            if (string.IsNullOrWhiteSpace(FullName)) return false;
+            if (string.IsNullOrWhiteSpace(EmailAddress)) return false;
+            return true;
         }
 
         public string Log()
         {
-            var logString = this.PersonId + ": " +
+            var logString = this.UserID + ": " +
                               this.FullName + " " +
                               "Email: " + this.EmailAddress + " " +
                               "Status: " + this.EntityState.ToString();
             return logString;
         }
 
-        private int _age;
         private Sex _sex;
 
-        public int PersonId { get; private set; }
+        public int UserID { get; private set; }
         public string EmailAddress { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public static int InstanceCount { get; set; }
+        public DateTime BirthDate { get; set; }
 
     }
 }

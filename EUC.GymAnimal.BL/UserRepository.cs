@@ -6,35 +6,35 @@ using System.Threading.Tasks;
 
 namespace EUC.GymAnimal.BL
 {
-    public class PersonRepository
+    public class UserRepository
     {
-        public Person Retrieve(int personId)
+        public User Retrieve(int userID)
         {
-            Person person = new Person(personId);
+            User user = new User(userID);
 
             //code to retrieve instance of the Person class
 
             // Temporary hard coded values to return 
             // a populated Person
-            if (personId==1)
+            if (userID==1)
             {
-                person.Age = 48;
-                person.EmailAddress = "jlopez@jlopez.co.uk";
-                person.FirstName = "Juan";
-                person.LastName = "Lopez";
-                person.Sex = Sex.Male;
+                user.BirthDate = new DateTime(1968,04,14);
+                user.EmailAddress = "jlopez@jlopez.co.uk";
+                user.FirstName = "Juan";
+                user.LastName = "Lopez";
+                user.Sex = Sex.Male;
             }
 
-            return person;
+            return user;
         }
 
-        public bool Save(Person person)
+        public bool Save(User user)
         {
             var success = true;
 
-            if (person.HasChanges && person.IsValid)
+            if (user.HasChanges && user.IsValid)
             {
-                if (person.IsNew)
+                if (user.IsNew)
                 {
                     // Call an Insert Stored Procedure
 

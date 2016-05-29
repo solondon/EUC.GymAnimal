@@ -5,13 +5,13 @@ using EUC.GymAnimal.BL;
 namespace EUC.GymAnimal.BLTest
 {
     [TestClass]
-    public class PersonTest
+    public class UserTest
     {
         [TestMethod]
-        public void PersonFullNameTestValid()
+        public void UserFullNameTestValid()
         {
             //Arrange
-            Person person = new Person();
+            User person = new User();
             person.FirstName = "Juan";
             person.LastName = "Lopez";
 
@@ -25,10 +25,10 @@ namespace EUC.GymAnimal.BLTest
         }
 
         [TestMethod]
-        public void PersonFullNameFirstNameEmpty()
+        public void UserFullNameFirstNameEmpty()
         {
             //Arrange
-            Person person = new Person();
+            User person = new User();
             person.LastName = "Lopez";
 
             string expected = "Lopez";
@@ -41,10 +41,10 @@ namespace EUC.GymAnimal.BLTest
         }
 
         [TestMethod]
-        public void PersonFullNameLastNameEmpty()
+        public void UserFullNameLastNameEmpty()
         {
             //Arrange
-            Person person = new Person();
+            User person = new User();
             person.FirstName = "Juan";
 
             string expected = "Juan";
@@ -57,10 +57,10 @@ namespace EUC.GymAnimal.BLTest
         }
 
         [TestMethod]
-        public void PersonValidateValid()
+        public void UserValidateValid()
         {
             //Arrange
-            Person person = new Person();
+            User person = new User();
             person.EmailAddress = "jlopez@jlopez.co.uk";
             person.FirstName = "Juan";
             person.LastName = "Lopez";
@@ -75,10 +75,10 @@ namespace EUC.GymAnimal.BLTest
         }
 
         [TestMethod]
-        public void PersonValidateInvalidOnlyEmailAddress()
+        public void UserValidateInvalidOnlyEmailAddress()
         {
             //Arrange
-            Person person = new Person();
+            User person = new User();
             person.EmailAddress = "jlopez@jlopez.co.uk";
 
             bool expected = false;
@@ -91,10 +91,10 @@ namespace EUC.GymAnimal.BLTest
         }
 
         [TestMethod]
-        public void PersonValidateInvalidNoEmailAddress()
+        public void UserValidateInvalidNoEmailAddress()
         {
             //Arrange
-            Person person = new Person();
+            User person = new User();
             person.FirstName = "Juan";
             person.LastName = "Lopez";
 

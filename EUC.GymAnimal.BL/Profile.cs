@@ -40,55 +40,53 @@ namespace EUC.GymAnimal.BL
 
         public double CalculateBMI()
         {
-            double bmi = 0;
+            if (WeightKg == 0) throw new ArgumentException("WeightKg is required to calculate BMI");
+            if (HeightCm == 0) throw new ArgumentException("HeightCm is required to calculate BMI");
 
-            //error checking
-            if (WeightKg == 0) throw new Exception("WeightKg not specified cant calculate BMI");
-            if (HeightCm == 0) throw new Exception("HeightCm not specified cant calculate BMI");
-
-            //double BMI = kg / Math.Pow(heightInCm / 100.0, 2);
-            bmi = WeightKg / Math.Pow(HeightCm / 100.0, 2);
+            double bmi = WeightKg / Math.Pow(HeightCm / 100.0, 2);
             bmi = Math.Round(bmi, 1);
-
             return bmi;
         }
 
         public WeightStatus CalculateWeightStatus(Sex gender)
         {
-            WeightStatus status = WeightStatus.UnKnown;
-
             double bmi = CalculateBMI();
 
-            if (gender == Sex.Male)
-            {
-                if (bmi < 20) status = WeightStatus.Underweight;
-                else if (bmi >= 20 && bmi <= 25) status = WeightStatus.Normal;
-                else if (bmi > 25) status = WeightStatus.Overweight;
-            }
-            else if (gender == Sex.Female)
-            {
-                if (bmi < 19) status = WeightStatus.Underweight;
-                else if (bmi >= 20 && bmi <= 25) status = WeightStatus.Normal;
-                else if (bmi > 25) status = WeightStatus.Overweight;
-            }
+            const int lowMaleBmi = 20;
+            const int lowFemaleBmi = 19;
+            const int highBmi = 25;
+
+            WeightStatus status = WeightStatus.UnKnown;
+            if (gender == Sex.Male) status = CalculateUserWeightStatus(bmi, lowMaleBmi, highBmi);
+            else if (gender == Sex.Female) status = CalculateUserWeightStatus(bmi, lowFemaleBmi, highBmi);
+
+            return status;
+        }
+
+        private static WeightStatus CalculateUserWeightStatus( double bmi, int lowBmi, int highBmi)
+        {
+            WeightStatus status;
+
+            if (bmi < lowBmi) status = WeightStatus.Underweight;
+            else if (bmi >= lowBmi && bmi <= highBmi) status = WeightStatus.Normal;
+            else if (bmi > highBmi) status = WeightStatus.Overweight;
+            else status = WeightStatus.UnKnown;
 
             return status;
         }
 
         public override bool Validate()
         {
-            bool isValid = true;
-            if (MeasurementDate==null) isValid = false;
-            if (WeightKg == 0) isValid = false;
-            if (HeightCm == 0) isValid = false;
-            return isValid;
+            if (MeasurementDate==null) return false;
+            if (WeightKg == 0) return false;
+            if (HeightCm == 0) return false;
+            return true;
         }
 
         public string Log()
         {
             var logstring= this.ProfileId + ": Heightcm: " + this.HeightCm
                 + " WeightKg: " + this.WeightKg + " " + this.EntityState.ToString();
-
             return logstring;
         }
 
@@ -98,7 +96,6 @@ namespace EUC.GymAnimal.BL
         public double HeightCm { get; set; }
         public double BodyFatPercentage { get; set; }
         public double BodyFatMass { get; set; }
-        public static int InstanceCount { get; set; }
 
         private double _bmi;
         

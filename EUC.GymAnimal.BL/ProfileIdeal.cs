@@ -6,32 +6,16 @@ using System.Threading.Tasks;
 
 namespace EUC.GymAnimal.BL
 {
-    class ProfileIdeal : BaseEntity
+    class ProfileIdeal 
     {
-        public ProfileIdeal()
-        {
-        }
-
-        public ProfileIdeal(int idealProfileId)
-        {
-            this.IdealProfileId = idealProfileId;
-        }
-
-        public bool CalculateIdealProfile(Profile profile)
-        {
-            //lets calculate our perfect stats
-            //from the data in the Profile object
-            return true;
-        }
 
         public double CalculateIdealBMI(Profile profile, Sex gender, int age)
         {
-            double idealBmi = 0;
-
             //error checking
-            if (profile.WeightKg == 0) throw new Exception("WeightKg not specified cant calculate BMI");
-            if (profile.HeightCm == 0) throw new Exception("HeightCm not specified cant calculate BMI");
+            if (profile.WeightKg == 0) throw new ArgumentException("WeightKg not specified cant calculate BMI");
+            if (profile.HeightCm == 0) throw new ArgumentException("HeightCm not specified cant calculate BMI");
 
+            double idealBmi;
             if (gender==Sex.Male)
             {
                 //Men Ideal BMI = 0.5 * kg / m2 + 11.5
@@ -45,7 +29,6 @@ namespace EUC.GymAnimal.BL
                 idealBmi = Math.Round(idealBmi, 1);
             }
 
-            IdealBMI = idealBmi;
             return idealBmi;
         }
 
@@ -68,9 +51,6 @@ namespace EUC.GymAnimal.BL
                 int inches = totalInches % 12; // This will give you the remainder after you divide by 12
                 Console.WriteLine("\nThe equivalent in feet and inches is {0:C} ft {1:G} ins", Feet, inches);
                 */
-
-                idealWeight =
-
                 idealWeight = (0.5 * profile.WeightKg / Math.Pow(profile.HeightCm / 100.0, 2)) + 11.5;
                 idealWeight = Math.Round(idealWeight, 1);
             }
@@ -80,22 +60,18 @@ namespace EUC.GymAnimal.BL
 
             }
 
-
-                IdealWeight = 0;
             return idealWeight;
         }
 
-        public int IdealProfileId { get; set; }
-
-        //calculated
-        public double IdealWeight { get; private set; }
-        public double IdealBMI { get; private set; }
-        public double IdealBodyFatPercentage { get; private set; }
-        public double IdealBodyFatMass { get; private set; }
-
-        public override bool Validate()
+        public double CalculateIdealBodyFatPercentage(Profile profile, Sex gender, int age)
         {
-            return true;
+            return 0;
         }
+
+        public double CalculateIdealBodyFatMass(Profile profile, Sex gender, int age)
+        {
+            return 0;
+        }
+
     }
 }
