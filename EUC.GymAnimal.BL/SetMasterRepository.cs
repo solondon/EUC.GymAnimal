@@ -22,7 +22,7 @@ namespace EUC.GymAnimal.BL
             {
                 setMaster.Exercise = "Front to Back Lunge";
                 setMaster.Notes="Each Leg";
-                setMaster.SetType = TypeOfSet.SingleSet;
+                setMaster.SetType = SetType.SingleSet;
             }
 
             return setMaster;

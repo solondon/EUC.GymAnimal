@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace EUC.GymAnimal.BL
 {
-    public enum TypeOfSet
+    //TODO how to tie this into db table
+    public enum SetType
     {
-        UnKnown = 0,
-        SingleSet = 1,
-        SuperSet,
-        GiantSet,
-        ProgressiveSet,
-        ForceSet
+        UnKnown = 1,
+        SingleSet=2 ,
+        SuperSet=3,
+        GiantSet=4,
+        ProgressiveSet=5,
+        ForceSet=6
     }
 
     public class SetMaster : BaseEntity
@@ -29,13 +30,13 @@ namespace EUC.GymAnimal.BL
 
         public override bool Validate()
         {
-            if (SetType == TypeOfSet.UnKnown) return false;
+            if (SetType == SetType.UnKnown) return false;
             if (string.IsNullOrWhiteSpace(Exercise)) return false;
             return true;
         }
 
         public int SetMasterId { get; private set; }
-        public TypeOfSet SetType { get; set; }
+        public SetType SetType { get; set; }
         public string Exercise { get; set; }
         public string Notes { get; set; }
         public List<SetItem> setItems { get; set; }

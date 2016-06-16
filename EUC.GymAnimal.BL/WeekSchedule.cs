@@ -7,11 +7,13 @@ using System.Threading.Tasks;
 
 namespace EUC.GymAnimal.BL
 {
+    //TODO plug into db call
     public enum Phase
     {
-        Build = 1,
-        Bulk,
-        Beast
+        Unknown=1,
+        Build = 2,
+        Bulk=3,
+        Beast=4
     }
 
     public class WeekSchedule : BaseEntity, ILoggable
